@@ -1,8 +1,8 @@
 # Reatividade no Flutter
 Projeto para estudos com Modular + Triple.
 
-    > [Flutter Modular:] (https://pub.dev/packages/flutter_modular)
-    > [Flutter Triple:] (https://pub.dev/packages/flutter_triple)
+    [Flutter Modular:] (https://pub.dev/packages/flutter_modular)
+    [Flutter Triple:] (https://pub.dev/packages/flutter_triple)
 
  - Dica rápida 01: inicie seu repositório com o seguinte comando: 'flutter create --org com.yourdomain appname'. Isto fará com que você não precise alterar futuramente item a item em todo seu projeto para adequar o dominio. Caso necessite fazer este 'retrabalho' utilize a função CMD + Shift + F (MAC) ou Control + Shift + F (Windows);
 
