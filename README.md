@@ -1,9 +1,12 @@
 # Reatividade no Flutter
 Projeto para estudos com Modular + Triple.
+
     > Modular: https://pub.dev/packages/flutter_modular
     > Triple: https://pub.dev/packages/flutter_triple
 
- - Dica rápida: inicie seu repositório com o seguinte comando: 'flutter create --org com.yourdomain appname'. Isto fará com que você não precise alterar futuramente item a item em todo seu projeto para adequar o dominio. Caso necessite fazer este 'retrabalho' utilize a função CMD + Shift + F (MAC) ou Control + Shift + F (Windows);
+ - Dica rápida 01: inicie seu repositório com o seguinte comando: 'flutter create --org com.yourdomain appname'. Isto fará com que você não precise alterar futuramente item a item em todo seu projeto para adequar o dominio. Caso necessite fazer este 'retrabalho' utilize a função CMD + Shift + F (MAC) ou Control + Shift + F (Windows);
+
+ - Dica rápida 02: Inicie o repositório via terminal no VS Code. Como ele já tem consigo um cliente Git seu trabalho será facilitado. Extensões como o Git Lens e Git Graph poderão lhe ajudar a controlar melhor suas publicações. Lembre-se: daqui em diante você não viverá mais sem o tal GIT!
 
 ## Getting Started
 
