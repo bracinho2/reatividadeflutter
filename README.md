@@ -19,7 +19,7 @@ Em estudos prévios aprendemos sobre [Arquitetura Limpa](https://github.com/Flut
 
 ## Diário de Bordo
 
-###28/05/2022/Manhã 
+### 28/05/2022/Manhã 
 
 > Estudo e anotações sobre 'eNum';
 - Um importante mecanismo para melhor controlar as ações dos usuários. Finalmente consegui abstrair o uso correto do eNum dado que é necessário passar o tipo enum em um método para poder utilizá-lo. Aproveitei o embalo para aprender uma sugestão do Deivid sobre o 'extensions' para trabalhar com enum + map.
@@ -55,7 +55,7 @@ Na primeira parte do código elencamos nossas opções por meio do enum. Posteri
 
 Deixo um [Artigo do Jacob Moura](https://blog.flutterando.com.br/quais-os-problemas-que-o-flutter-modular-veio-resolver-deaed96b71b3) para leitura. É essencial que você leia com calma para entender como o Flutter Modular pretende organizar e resolver os problemas de roteamento e injeção.
 
-###25/05/2022/Manhã
+### 25/05/2022/Manhã
 
 > Abertura Criação do projeto e abertura do Repositório no GitHub;
     - Utilizei as dicas rápidas acima como validação. Até então eu sempre utilizava um Gerenciador de Git como o SourceTree que era visual, porém, separado do VS Code; Agora já consegui descobrir como iniciar o projeto diretamente no Cliente do VS e tudo fica bem mais fácil;
