@@ -21,8 +21,8 @@ Em estudos prévios aprendemos sobre [Arquitetura Limpa](https://github.com/Flut
 
 28/05/2022/Manhã 
 > Estudo e anotações sobre 'eNum';
-  - Um importante mecanismo para melhor controlar as ações dos usuários. Finalmente consegui abstrair o uso correto do eNum dado que é necessário passar o tipo enum em um método para poder utilizá-lo. Aproveitei o embalo para aprender uma sugestão do Deivid sobre o 'extensions' para trabalhar com enum + map.
-  
+- Um importante mecanismo para melhor controlar as ações dos usuários. Finalmente consegui abstrair o uso correto do eNum dado que é necessário passar o tipo enum em um método para poder utilizá-lo. Aproveitei o embalo para aprender uma sugestão do Deivid sobre o 'extensions' para trabalhar com enum + map.
+
 ```
 enum TipoPagamento { PIX, BOLETO, CARTAO }
 
@@ -43,13 +43,14 @@ extension ExtensionTipoPagamento on TipoPagamento {
 Na primeira parte do código elencamos nossas opções por meio do enum. Posteriormente configuramos uma extension para afinar ainda mais a usabilidade do mesmo. Após a versão do Dart 2.17 é possível termos um construtor para os itens do enum, facilitando ainda mais o uso;
 
 > Estudo sobre a instalação do Flutter Modular
-    - Aproveitando a deixa, realizei a instalação do Flutter Modular para este projeto. A ideia é melhorar o conhecimento sobre rotas e injeções com a ferramenta desenvolvida pela comunidade. Para quem realizou um estudo denso sobre as injeções sabe que o modular tem a proposta de resolver especialmente um problema simples: ao separar um projeto em vários módulos, em geral, nossa lista de injeções fica bastante carregada com N previsões para o código funcionar. Agora, com o Flutter Modular, teremos uma divisão melhor que é orquestrada pelo modular: 
-    
-    1. No "Core" colocamos todas as injeções que são comuns a todos os módulos;
-    2. No "AppModule" faremos a chamada das injeções presentes no "Core" (injeções comuns ao projeto!);
-    3. Em cada módulo teremos a previsão das injeções individualizadas, ou seja, uma lista separada que é independente dos outros módulos;
 
-    - Esta separação de injeções pode ser feita manualmente? Sim! Porém, o Flutter Modular pode lhe ajudar a resolver este problema facilmente. Como nem tudo são flores, recomendo fortemente que você estude muito de injeções e o Princípio de Inversão de Dependência do SOLID (DIP). A lista acima poderá lhe ajudar um monte sobre este assunto;
+- Aproveitando a deixa, realizei a instalação do Flutter Modular para este projeto. A ideia é melhorar o conhecimento sobre rotas e injeções com a ferramenta desenvolvida pela comunidade. Para quem realizou um estudo denso sobre as injeções sabe que o modular tem a proposta de resolver especialmente um problema simples: ao separar um projeto em vários módulos, em geral, nossa lista de injeções fica bastante carregada com N previsões para o código funcionar. Agora, com o Flutter Modular, teremos uma divisão melhor que é orquestrada pelo modular: 
+    
+1. No "Core" colocamos todas as injeções que são comuns a todos os módulos;
+2. No "AppModule" faremos a chamada das injeções presentes no "Core" (injeções comuns ao projeto!);
+3. Em cada módulo teremos a previsão das injeções individualizadas, ou seja, uma lista separada que é independente dos outros módulos;
+
+- Esta separação de injeções pode ser feita manualmente? Sim! Porém, o Flutter Modular pode lhe ajudar a resolver este problema facilmente. Como nem tudo são flores, recomendo fortemente que você estude muito de injeções e o Princípio de Inversão de Dependência do SOLID (DIP). A lista acima poderá lhe ajudar um monte sobre este assunto;
 
 Deixo um [Artigo do Jacob Moura](https://blog.flutterando.com.br/quais-os-problemas-que-o-flutter-modular-veio-resolver-deaed96b71b3) para leitura. É essencial que você leia com calma para entender como o Flutter Modular pretende organizar e resolver os problemas de roteamento e injeção.
 
