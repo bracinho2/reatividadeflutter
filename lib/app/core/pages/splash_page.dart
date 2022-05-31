@@ -5,7 +5,7 @@ import 'package:reatividadeflutter/app/shared/hard_debug.dart';
 class SplashPage extends StatelessWidget {
   SplashPage({Key? key}) : super(key: key) {
     HardDebug().consoleMessager('Rota /');
-    Future.delayed(const Duration(seconds: 3)).then((value) {
+    Future.delayed(const Duration(seconds: 1)).then((value) {
       Modular.to.pushNamedAndRemoveUntil('/home', (_) => false);
     });
   }

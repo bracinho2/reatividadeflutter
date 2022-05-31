@@ -13,8 +13,10 @@ main() {
             GetFarmerWithPhoneDataSourceLocalImpl()));
 
     var result = useCase.call(phone: '45');
-
-    expect(result, isInstanceOf<FarmerEntity>());
+    result.fold(
+      ((l) => null),
+      ((r) => expect(r, isInstanceOf<FarmerEntity>())),
+    );
   });
 
   test('Should return an instance of the Farmer with Phone Information 01', () {
@@ -23,8 +25,10 @@ main() {
             GetFarmerWithPhoneDataSourceLocalImpl()));
 
     var result = useCase.call(phone: '45');
-
-    expect(result.name, 'Alex');
+    result.fold(
+      ((l) => null),
+      ((r) => expect(r.name, 'Alex')),
+    );
   });
 
   test('Should return an instance of the Farmer with Phone Information 02', () {
@@ -34,6 +38,9 @@ main() {
 
     var result = useCase.call(phone: '44');
 
-    expect(result.name, 'Roberto');
+    result.fold(
+      ((l) => null),
+      ((r) => expect(r.name, 'Roberto')),
+    );
   });
 }

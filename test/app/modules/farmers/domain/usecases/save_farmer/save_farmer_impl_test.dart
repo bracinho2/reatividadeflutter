@@ -1,15 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:reatividadeflutter/app/modules/farmers/domain/entity/farmer_entity.dart';
-import 'package:reatividadeflutter/app/modules/farmers/domain/repositories/save_farmer_repository.dart';
 import 'package:reatividadeflutter/app/modules/farmers/domain/usecases/save_farmer/save_farmer_impl.dart';
 import 'package:reatividadeflutter/app/modules/farmers/domain/usecases/save_farmer/save_farmer_interface.dart';
-
-class SaveFarmerRepositoryImpl implements ISaveFarmerRepository {
-  @override
-  Future<bool> call({required FarmerEntity farmerEntity}) async {
-    return farmerEntity.name.isNotEmpty;
-  }
-}
+import 'package:reatividadeflutter/app/modules/farmers/infra/repositories/save_farmer_repository_impl.dart';
 
 main() {
   test('Should save an Farmer if name is not empty', () async {
@@ -27,7 +20,9 @@ main() {
         '');
 
     var result = await useCase.call(farmerEntity: farmerEntity);
-
-    expect(result, true);
+    result.fold(
+      ((l) => null),
+      ((r) => expect(r, true)),
+    );
   });
 }

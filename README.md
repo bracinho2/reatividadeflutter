@@ -19,6 +19,9 @@ Em estudos prévios aprendemos sobre [Arquitetura Limpa](https://github.com/Flut
 
 ## Diário de Bordo
 
+### 30/05/2022/Dia Todo
+> Estudo de Testes de Domínio
+- No curso do Deivid encontramos uma excelente explanação introdutória capaz de empoderar o iniciante na mágica trajetória de testes. Para além da construção de uma arquitetura preparada para teste, os testes foram muito importantes para entender o funcionamento da testagem de pequenos trechos de código. Ademais, depois pudemos ter uma pequenina noção de como desenvolver com a filosofia do TDD, ou seja, em um determinado momento fomos instigados a desenvolver um teste primeiro para depois implementarmos a camada e, pasmem, foi uma das melhores experiências que já tive, pois, ao deixar o teste pronto, a camada na qual estavamos testando já praticamente teve sua implementação construída, bastando apenas move-la para seu lugar correto na arquitetura. Super recomendo estes estudos. 73.
 ### 28/05/2022/Manhã 
 
 > Estudo e anotações sobre 'eNum';

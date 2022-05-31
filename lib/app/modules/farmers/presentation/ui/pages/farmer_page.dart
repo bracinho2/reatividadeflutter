@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:reatividadeflutter/app/modules/farmers/presentation/controllers/farmer_controller.dart';
 import 'package:reatividadeflutter/app/shared/hard_debug.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class FarmerPage extends StatelessWidget {
+  FarmerPage({Key? key}) : super(key: key);
+
+  final controller = Modular.get<FarmerController>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
+        children: [
           Center(
             child: Text(
-              'Home Page',
-              style: TextStyle(
+              controller.farmerEntity.name,
+              style: const TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
               ),
@@ -23,10 +26,10 @@ class HomePage extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.forward),
+        child: const Icon(Icons.exit_to_app),
         onPressed: () {
-          HardDebug().consoleMessager('Rota /farmer');
-          Modular.to.pushNamed('/farmer');
+          HardDebug().consoleMessager('Rota /home');
+          Modular.to.pop();
         },
       ),
     );

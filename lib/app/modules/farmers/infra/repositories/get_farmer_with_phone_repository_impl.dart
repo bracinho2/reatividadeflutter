@@ -1,4 +1,6 @@
+import 'package:dartz/dartz.dart';
 import 'package:reatividadeflutter/app/modules/farmers/domain/entity/farmer_entity.dart';
+import 'package:reatividadeflutter/app/modules/farmers/domain/errors/errors.dart';
 import 'package:reatividadeflutter/app/modules/farmers/domain/repositories/get_farmer_with_phone_repository.dart';
 import 'package:reatividadeflutter/app/modules/farmers/infra/datasources/get_farmer_with_phone_data_source_interface.dart';
 
@@ -9,7 +11,7 @@ class GetFarmerWithPhoneRepositoryImpl
   GetFarmerWithPhoneRepositoryImpl(this._iGetFarmerWithPhoneDatasource);
 
   @override
-  FarmerEntity call({required String phone}) {
+  Either<Failure, FarmerEntity> call({required String phone}) {
     return _iGetFarmerWithPhoneDatasource.call(phone: phone);
   }
 }
