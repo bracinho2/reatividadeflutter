@@ -17,7 +17,7 @@ class FarmerController {
 
     result.fold(
       (failure) => print(failure.toString()),
-      (farmerEntity) => farmerEntity = farmerEntity,
+      (success) => farmerEntity = success,
     );
   }
 
@@ -26,7 +26,7 @@ class FarmerController {
 
     result.fold(
       (failure) => print(failure.toString()),
-      (r) => null,
+      (sucess) => print(sucess),
     );
   }
 }
