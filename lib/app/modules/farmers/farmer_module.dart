@@ -9,7 +9,7 @@ import 'package:reatividadeflutter/app/modules/farmers/external/local_storage/ge
 import 'package:reatividadeflutter/app/modules/farmers/infra/datasources/get_farmer_with_phone_data_source_interface.dart';
 import 'package:reatividadeflutter/app/modules/farmers/infra/repositories/get_farmer_with_phone_repository_impl.dart';
 import 'package:reatividadeflutter/app/modules/farmers/infra/repositories/save_farmer_repository_impl.dart';
-import 'package:reatividadeflutter/app/modules/farmers/presentation/controllers/farmer_controller.dart';
+import 'package:reatividadeflutter/app/modules/farmers/presentation/controllers/farmer_store.dart';
 import 'package:reatividadeflutter/app/modules/farmers/presentation/ui/pages/farmer_page.dart';
 
 class FarmerModule extends Module {
@@ -32,11 +32,15 @@ class FarmerModule extends Module {
     Bind.lazySingleton<ISaveFarmerUsecase>((i) => SaveFarmerUsecaseImpl(i())),
 
     //farmer controller
-    Bind.factory<FarmerController>((i) => FarmerController(i(), i())),
+    Bind.factory<FarmerStore>((i) => FarmerStore(i(), i())),
   ];
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute('/', child: ((context, args) => FarmerPage())),
+    ChildRoute(
+      '/',
+      child: ((context, args) =>
+          FarmerPage(farmerStore: Modular.get<FarmerStore>())),
+    ),
   ];
 }

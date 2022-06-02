@@ -4,11 +4,11 @@ import 'package:reatividadeflutter/app/modules/farmers/domain/errors/errors.dart
 import 'package:reatividadeflutter/app/modules/farmers/domain/usecases/get_farmer_with_phone/get_farmer_with_phone_interface.dart';
 import 'package:reatividadeflutter/app/modules/farmers/domain/usecases/save_farmer/save_farmer_interface.dart';
 
-class FarmerController extends NotifierStore<Failure, FarmerEntity> {
+class FarmerStore extends NotifierStore<Failure, FarmerEntity> {
   final IGetFarmerWithPhone _getFarmerWithPhone;
   final ISaveFarmerUsecase _iSaveFarmerUsecase;
 
-  FarmerController(this._getFarmerWithPhone, this._iSaveFarmerUsecase)
+  FarmerStore(this._getFarmerWithPhone, this._iSaveFarmerUsecase)
       : super(FarmerEntity('', '', '', '', '', '', '', '')) {
     getFarmerWithPhone(phone: '44');
   }
