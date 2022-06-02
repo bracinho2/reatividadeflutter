@@ -8,6 +8,7 @@ class SaveFarmerRepositoryImpl implements ISaveFarmerRepository {
   Future<Either<Failure, bool>> call(
       {required FarmerEntity farmerEntity}) async {
     try {
+      print(farmerEntity.toString());
       return right(farmerEntity.name.isNotEmpty);
     } catch (e) {
       return Left(

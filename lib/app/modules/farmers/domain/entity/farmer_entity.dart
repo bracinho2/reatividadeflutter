@@ -22,4 +22,9 @@ class FarmerEntity {
   String get contacts {
     return phone + ' + ' + email;
   }
+
+  @override
+  String toString() {
+    return 'FarmerEntity(name: $name, lastName: $lastName, birthDate: $birthDate, phone: $phone, email: $email, address: $address, latitude: $latitude, longitude: $longitude)';
+  }
 }

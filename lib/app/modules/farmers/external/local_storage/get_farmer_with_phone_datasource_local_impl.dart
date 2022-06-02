@@ -21,7 +21,7 @@ class GetFarmerWithPhoneDataSourceLocalImpl
     'lastName': 'lastName',
     'birthDate': 'birthDate',
     'phone': '44',
-    'email': 'email',
+    'email': 'roberto@ernzen.com',
     'address': 'address',
     'latitude': 'latitude',
     'longitude': 'longitude',
