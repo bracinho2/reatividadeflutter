@@ -9,11 +9,11 @@ class InputTextWidget extends StatelessWidget {
   final void Function(String? value)? onSaved;
   final void Function()? onTap;
   final TextInputType? textInputType;
-  final bool? obscureText;
+  final bool obscureText;
   final void Function(String?)? error;
   final bool? enabled;
   final int? minLines;
-  final int? maxLines;
+  final int maxLines;
   final bool? clear;
 
   const InputTextWidget({
@@ -26,11 +26,11 @@ class InputTextWidget extends StatelessWidget {
     this.onSaved,
     this.onTap,
     this.textInputType,
-    this.obscureText,
+    required this.obscureText,
     this.error,
     this.enabled,
     this.minLines,
-    this.maxLines,
+    required this.maxLines,
     this.clear,
   }) : super(key: key);
 
@@ -46,7 +46,7 @@ class InputTextWidget extends StatelessWidget {
         initialValue: initialValue,
         minLines: minLines,
         maxLines: maxLines,
-        obscureText: obscureText!,
+        obscureText: obscureText,
         controller: controller,
         onChanged: onChanged,
         onSaved: onSaved,

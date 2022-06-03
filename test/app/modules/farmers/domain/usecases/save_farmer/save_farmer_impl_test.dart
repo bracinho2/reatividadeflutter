@@ -10,14 +10,14 @@ main() {
         SaveFarmerUsecaseImpl(SaveFarmerRepositoryImpl());
 
     FarmerEntity farmerEntity = FarmerEntity(
-        'Roberto',
-        'Ernzen',
-        '23/02/1984',
-        '+5545999247838',
-        'bracinho2@hotmail.com',
-        'Linha Bom Jesus - Sulina - PR',
-        '',
-        '');
+        name: 'Roberto',
+        lastName: 'Ernzen',
+        birthDate: '23/02/1984',
+        phone: '+5545999247838',
+        email: 'bracinho2@hotmail.com',
+        address: 'Linha Bom Jesus - Sulina - PR',
+        latitude: '',
+        longitude: '');
 
     var result = await useCase.call(farmerEntity: farmerEntity);
     result.fold(

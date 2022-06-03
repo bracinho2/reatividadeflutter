@@ -11,6 +11,31 @@ class SaveFarmerUsecaseImpl implements ISaveFarmerUsecase {
   @override
   Future<Either<Failure, bool>> call(
       {required FarmerEntity farmerEntity}) async {
-    return _iSaveFarmerRepository(farmerEntity: farmerEntity);
+    if (farmerEntity.name.isEmpty) {
+      return Left(FieldEmpty(message: 'name'));
+    }
+    if (farmerEntity.lastName.isEmpty) {
+      return Left(FieldEmpty(message: 'lastName'));
+    }
+    if (farmerEntity.birthDate.isEmpty) {
+      return Left(FieldEmpty(message: 'birth'));
+    }
+    if (farmerEntity.phone.isEmpty) {
+      return Left(FieldEmpty(message: 'phone'));
+    }
+    if (farmerEntity.email.isEmpty) {
+      return Left(FieldEmpty(message: 'email'));
+    }
+    if (farmerEntity.address.isEmpty) {
+      return Left(FieldEmpty(message: 'address'));
+    }
+    // if (farmerEntity.latitude.isEmpty) {
+    //   return Left(FieldEmpty(message: 'latitude'));
+    // }
+    // if (farmerEntity.longitude.isEmpty) {
+    //   return Left(FieldEmpty(message: 'longitude'));
+    // }
+
+    return await _iSaveFarmerRepository(farmerEntity: farmerEntity);
   }
 }

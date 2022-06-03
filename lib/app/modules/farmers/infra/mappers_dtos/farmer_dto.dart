@@ -12,14 +12,14 @@ class FarmerEntityMapper extends FarmerEntity {
     required String latitude,
     required String longitude,
   }) : super(
-          name,
-          lastName,
-          birthDate,
-          phone,
-          email,
-          address,
-          latitude,
-          longitude,
+          name: name,
+          lastName: lastName,
+          birthDate: birthDate,
+          phone: phone,
+          email: email,
+          address: address,
+          latitude: latitude,
+          longitude: longitude,
         );
 
   static Map<String, dynamic> toMap(FarmerEntity farmerEntity) {

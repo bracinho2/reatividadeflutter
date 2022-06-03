@@ -2,6 +2,13 @@ abstract class Failure implements Exception {
   String get message;
 }
 
+//erros
+class FieldEmpty extends Failure {
+  @override
+  final String message;
+  FieldEmpty({required this.message});
+}
+
 class DatasourceError extends Failure {
   @override
   final String message;

@@ -11,6 +11,7 @@ import 'package:reatividadeflutter/app/modules/farmers/infra/repositories/get_fa
 import 'package:reatividadeflutter/app/modules/farmers/infra/repositories/save_farmer_repository_impl.dart';
 import 'package:reatividadeflutter/app/modules/farmers/presentation/controllers/farmer_store.dart';
 import 'package:reatividadeflutter/app/modules/farmers/presentation/ui/pages/farmer_page.dart';
+import 'package:reatividadeflutter/app/modules/farmers/presentation/ui/pages/farmer_page_add.dart';
 
 class FarmerModule extends Module {
   @override
@@ -37,10 +38,11 @@ class FarmerModule extends Module {
 
   @override
   final List<ModularRoute> routes = [
-    ChildRoute(
-      '/',
-      child: ((context, args) =>
-          FarmerPage(farmerStore: Modular.get<FarmerStore>())),
-    ),
+    ChildRoute('/',
+        child: ((context, args) =>
+            FarmerPage(farmerStore: Modular.get<FarmerStore>()))),
+    ChildRoute('/farmerAdd',
+        child: ((context, args) =>
+            FarmerPageAdd(farmerStore: Modular.get<FarmerStore>()))),
   ];
 }

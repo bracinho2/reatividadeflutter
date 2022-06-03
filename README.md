@@ -19,6 +19,33 @@ Em estudos prévios aprendemos sobre [Arquitetura Limpa](https://github.com/Flut
 
 ## Diário de Bordo
 
+### 03/06/2022 | Manhã 1 hora;
+Hoje é sexta-feira. Atualizei minhas anotações e finalizei o estudo de passagem de dados por meio de rotas nomeadas. HOje o dia é mais curto e também preciso descançar um bocado. Faz parte do processo também digerir os conhecimentos e dar uma pequena pausa, até porque, temos que cuidar inclusive da vida! haha! Nos vemos em breve!
+
+### 02/06/2022 | Manhã 2 horas e Tarde 3 horas;
+> Testes com o Flutter Modular
+Fiz exaustivos testes com o Flutter Modular para mitigar as dúvidas de como navegar e como passar os dados via rotas nomeadas, e pasmem, depois de uma experiência prévia com rotas nomeadas as coisas se encaixaram facilmente. Com alguns pequenos ajustes consegui passar dados via argumentos de uma tela para a outra com uma facilidade incrível. Ademais o conceito de Binds e Routes do Modular é muito interessante. Você pode separar as respectivas injeções de cada módulo e chamar este bloco de injeções no Module principal, melhorando e muito a gestão destas dependências;
+Dica de ouro:
+- Estude bastante sobre o Module; Todo módulo/feature do seu projeto terá que estender do Módulo para depois injetar esta 'lista' na lista de Modules principal;
+- Para navegar entre páginas você deve utilizar o 'ChildRoute'.
+- Para entrar e navegar em um módulo você deve utilizar o ModuleRouter e em seguida chamar o 'módulo' do seu módulo(ficou estranho né!) onde estão as injeções e rotas do bloco e, bingo! Vai navegar facilmente.
+
+### 01/06/2022 | Manhã 2 horas e Tarde 3 horas;
+> Implementação do Flutter Triple no projeto
+Finalmente cheguei ao início desta virada de chave: sair do backend com um conhecimento básico sólido sobre arquitetura e agora iniciar os estudos sobre reatividade. Depoois de ler e reler e anotar umas 50x os conceitos básicos do Triple fiz a primeira implementação e quase, literalmente, cai da cadeira! A reatividade não é algo impossível de se fazer! Amém!
+
+Dicas importantes neste processo:
+- Estude sobre ChangeNotifier para entender os conceitos de Observable e Listenable, ou seja, quem pode ser observado e quem pode escutá-lo. Neste conceito você pode aprender mais como tornar uma classe controller(store) 'observável' por sua tela por exemplo. Depois de alterar alguma coisa você poderá chamar o seu ajudante 'notifyListeners()';
+- Estude sobre ValueNotifier que também é um Observable/Listenable, porém, a diferença mais elementar é que no ChangeNotifier você opera com uma classe e no ValueNotifier você pode operar com alguma variável, etc. Detalhe: ele é um ChangeNotifier abstraído...bingo!
+- Estude sobre BLOC. Sim! Você ouviu direito. Com o Bloc Pattern você poderá aprender sobre os famosos 'events' e 'states'. Pensa o seguinte: toda ação no app é um evento que dispara a mudança de estado da tela, ou seja, algo como 'carregando', 'carregado', erro'. Isto vai te ajudar de monte!
+- Finalmente você vai chegar no Triple: como o nome sugere, é um Segmented State Pattern, que carrega consigo 3 estados básicos: 
+  - Carregando;
+  - Erro;
+  - Sucesso;
+Depois de aprender estes três estados você verá que existem alguns widgets que passam escutar sua Store(ou controller...) e ali você pode realizar as mudanças que deseja e tudo trabalhará de forma facilitada. Siga o manual e atente-se para o seguinte: no manual do Triple temos um exemplo do famoso contador, ou seja, a variável que esta a se trabalhar é um INT. Você pode substituir ela por sua entidade ou lista de entidades, por exemplo. 
+
+
+
 ### 30/05/2022/Dia Todo
 > Estudo das camadas Data (também conhecida como Infra) com seus contratos de Datasource e implementação dos contratos de Repositório. Adicionamos também a camada External (Que também pode ser encontrada em Data) seguindo a sugestão da comunidade flutterando. Muito importante é ter camadas com tarefas bem definidas. A utilização do Repository Pattern com o Data Transfer Object (Também conhecidos como Mappers) que pode trabalhar junto com o Datasource é importantíssima para ter as tarefas separadas. Sempre que precisarmos de algum dado "externo" deveremos delegar esta tarefa ao Datasource. Inclusive os tratamentos de Try e Catch serão sempre aplicados nas chamadas camadas de entrada, ou seja, nas camadas que recebem algum tipo de dado de fontes diferentes. Também foi realizada a implementação do pacote DartZ, pacote que nos abre novas possibilidades para o tratamento de dados e erros. Com ele é possível utilizar os conceitos presentes em Either, ou seja, Left(error) e Right (sucess);
 

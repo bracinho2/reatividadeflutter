@@ -4,28 +4,28 @@ import 'package:reatividadeflutter/app/modules/farmers/domain/entity/farmer_enti
 main() {
   test('Shouldn\'t be null', () {
     FarmerEntity farmerEntity = FarmerEntity(
-        'Roberto',
-        'Ernzen',
-        '23/02/1984',
-        '+5545999247838',
-        'bracinho2@hotmail.com',
-        'Linha Bom Jesus - Sulina - PR',
-        '',
-        '');
+        name: 'Alex',
+        lastName: 'Ernzen',
+        birthDate: '23/02/1984',
+        phone: '+5545999247838',
+        email: 'bracinho2@hotmail.com',
+        address: 'Linha Bom Jesus - Sulina - PR',
+        latitude: '',
+        longitude: '');
 
     expect(farmerEntity, isNotNull);
   });
 
   test('Get the contact\'s farmer', () {
     FarmerEntity farmerEntity = FarmerEntity(
-        'Roberto',
-        'Ernzen',
-        '23/02/1984',
-        '+5545999247838',
-        'bracinho2@hotmail.com',
-        'Linha Bom Jesus - Sulina - PR',
-        '',
-        '');
+        name: 'Roberto',
+        lastName: 'Ernzen',
+        birthDate: '23/02/1984',
+        phone: '+5545999247838',
+        email: 'bracinho2@hotmail.com',
+        address: 'Linha Bom Jesus - Sulina - PR',
+        latitude: '',
+        longitude: '');
 
     var expectedResult = farmerEntity.phone + ' + ' + farmerEntity.email;
 

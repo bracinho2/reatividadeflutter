@@ -8,16 +8,16 @@ class FarmerEntity {
   final String latitude;
   final String longitude;
 
-  FarmerEntity(
-    this.name,
-    this.lastName,
-    this.birthDate,
-    this.phone,
-    this.email,
-    this.address,
-    this.latitude,
-    this.longitude,
-  );
+  FarmerEntity({
+    required this.name,
+    required this.lastName,
+    required this.birthDate,
+    required this.phone,
+    required this.email,
+    required this.address,
+    required this.latitude,
+    required this.longitude,
+  });
 
   String get contacts {
     return phone + ' + ' + email;

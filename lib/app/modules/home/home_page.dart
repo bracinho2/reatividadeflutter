@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:reatividadeflutter/app/modules/farmers/domain/entity/farmer_entity.dart';
 import 'package:reatividadeflutter/app/shared/hard_debug.dart';
 
 class HomePage extends StatelessWidget {
@@ -26,7 +27,7 @@ class HomePage extends StatelessWidget {
         child: const Icon(Icons.forward),
         onPressed: () {
           HardDebug().consoleMessager('Rota /farmer');
-          Modular.to.pushNamed('/farmer');
+          Modular.to.pushNamed('/farmer/');
         },
       ),
     );
