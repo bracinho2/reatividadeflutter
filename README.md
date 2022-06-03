@@ -46,13 +46,13 @@ Depois de aprender estes três estados você verá que existem alguns widgets qu
 
 
 
-### 30/05/2022/Dia Todo
+### 30/05/2022 | Dia Todo
 > Estudo das camadas Data (também conhecida como Infra) com seus contratos de Datasource e implementação dos contratos de Repositório. Adicionamos também a camada External (Que também pode ser encontrada em Data) seguindo a sugestão da comunidade flutterando. Muito importante é ter camadas com tarefas bem definidas. A utilização do Repository Pattern com o Data Transfer Object (Também conhecidos como Mappers) que pode trabalhar junto com o Datasource é importantíssima para ter as tarefas separadas. Sempre que precisarmos de algum dado "externo" deveremos delegar esta tarefa ao Datasource. Inclusive os tratamentos de Try e Catch serão sempre aplicados nas chamadas camadas de entrada, ou seja, nas camadas que recebem algum tipo de dado de fontes diferentes. Também foi realizada a implementação do pacote DartZ, pacote que nos abre novas possibilidades para o tratamento de dados e erros. Com ele é possível utilizar os conceitos presentes em Either, ou seja, Left(error) e Right (sucess);
 
-### 30/05/2022/Dia Todo
+### 30/05/2022 | Dia Todo
 > Estudo de Testes de Domínio
 - No curso do Deivid encontramos uma excelente explanação introdutória capaz de empoderar o iniciante na mágica trajetória de testes. Para além da construção de uma arquitetura preparada para teste, os testes foram muito importantes para entender o funcionamento da testagem de pequenos trechos de código. Ademais, depois pudemos ter uma pequenina noção de como desenvolver com a filosofia do TDD, ou seja, em um determinado momento fomos instigados a desenvolver um teste primeiro para depois implementarmos a camada e, pasmem, foi uma das melhores experiências que já tive, pois, ao deixar o teste pronto, a camada na qual estavamos testando já praticamente teve sua implementação construída, bastando apenas move-la para seu lugar correto na arquitetura. Super recomendo estes estudos. 73.
-### 28/05/2022/Manhã 
+### 28/05/2022 | Manhã 1 hora
 
 > Estudo e anotações sobre 'eNum';
 - Um importante mecanismo para melhor controlar as ações dos usuários. Finalmente consegui abstrair o uso correto do eNum dado que é necessário passar o tipo enum em um método para poder utilizá-lo. Aproveitei o embalo para aprender uma sugestão do Deivid sobre o 'extensions' para trabalhar com enum + map.
@@ -88,7 +88,7 @@ Na primeira parte do código elencamos nossas opções por meio do enum. Posteri
 
 Deixo um [Artigo do Jacob Moura](https://blog.flutterando.com.br/quais-os-problemas-que-o-flutter-modular-veio-resolver-deaed96b71b3) para leitura. É essencial que você leia com calma para entender como o Flutter Modular pretende organizar e resolver os problemas de roteamento e injeção.
 
-### 25/05/2022/Manhã
+### 25/05/2022 | Manhã 2 horas;
 
 > Abertura Criação do projeto e abertura do Repositório no GitHub;
     - Utilizei as dicas rápidas acima como validação. Até então eu sempre utilizava um Gerenciador de Git como o SourceTree que era visual, porém, separado do VS Code; Agora já consegui descobrir como iniciar o projeto diretamente no Cliente do VS e tudo fica bem mais fácil;
