@@ -10,7 +10,7 @@ main() {
   test('Should return an instance of the farmer', () {
     IGetFarmerWithPhone useCase = GetFarmerWithPhoneImpl(
         GetFarmerWithPhoneRepositoryImpl(
-            GetFarmerWithPhoneDataSourceLocalImpl()));
+            GetFarmerWithPhoneDataourceLocalImpl()));
 
     var result = useCase.call(phone: '45');
     result.fold(
@@ -22,7 +22,7 @@ main() {
   test('Should return an instance of the Farmer with Phone Information 01', () {
     IGetFarmerWithPhone useCase = GetFarmerWithPhoneImpl(
         GetFarmerWithPhoneRepositoryImpl(
-            GetFarmerWithPhoneDataSourceLocalImpl()));
+            GetFarmerWithPhoneDataourceLocalImpl()));
 
     var result = useCase.call(phone: '45');
     result.fold(
@@ -34,7 +34,7 @@ main() {
   test('Should return an instance of the Farmer with Phone Information 02', () {
     IGetFarmerWithPhone useCase = GetFarmerWithPhoneImpl(
         GetFarmerWithPhoneRepositoryImpl(
-            GetFarmerWithPhoneDataSourceLocalImpl()));
+            GetFarmerWithPhoneDataourceLocalImpl()));
 
     var result = useCase.call(phone: '44');
 

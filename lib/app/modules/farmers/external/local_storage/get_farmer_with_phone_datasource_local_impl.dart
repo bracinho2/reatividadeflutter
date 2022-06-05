@@ -1,9 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:reatividadeflutter/app/modules/farmers/domain/errors/errors.dart';
-import 'package:reatividadeflutter/app/modules/farmers/infra/datasources/get_farmer_with_phone_data_source_interface.dart';
+import 'package:reatividadeflutter/app/modules/farmers/infra/datasources/get_farmer_with_phone_datasource_interface.dart';
 import 'package:reatividadeflutter/app/modules/farmers/infra/mappers_dtos/farmer_dto.dart';
 
-class GetFarmerWithPhoneDataSourceLocalImpl
+class GetFarmerWithPhoneDataourceLocalImpl
     implements IGetFarmerWithPhoneDatasource {
   final json0 = {
     'name': 'Alex',

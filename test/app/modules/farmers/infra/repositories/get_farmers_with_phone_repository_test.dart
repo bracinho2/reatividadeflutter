@@ -5,7 +5,7 @@ import 'package:reatividadeflutter/app/modules/farmers/infra/repositories/get_fa
 
 main() {
   IGetFarmerWithPhoneRepository repository =
-      GetFarmerWithPhoneRepositoryImpl(GetFarmerWithPhoneDataSourceLocalImpl());
+      GetFarmerWithPhoneRepositoryImpl(GetFarmerWithPhoneDataourceLocalImpl());
 
   test('Return an Farmer Instance', () {
     var result = repository(phone: '45');
